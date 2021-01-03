@@ -3,5 +3,5 @@
 
 // Puerto
 
-const port = process.allowedNodeEnvironmentFlags.PORT || 3000
+const port = process.allowedNodeEnvironmentFlags.PORT || 3000;
 
