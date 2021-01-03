@@ -33,9 +33,7 @@ app.post('/usuario/:id', function (req, res) {
         res.json({
             persona: body
         });
-    }
-
-    
+    }    
 })
 
 app.put('/usuario', function (req, res) {
