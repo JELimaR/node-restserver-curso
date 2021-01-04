@@ -24,8 +24,7 @@ mongoose.connect(process.env.URLDB, {
   serverSelectionTimeoutMS: 5000,
   useFindAndModify: false,
   useCreateIndex: true,
-  user: 'juanlr07',
-  pass: 'VPdeig0ecqXt7jif'
+  dbName: 'cafe'
 })
 .then( () => {
   console.log('Base de datos ONLINE');
