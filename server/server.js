@@ -1,5 +1,5 @@
 require('./config/config');
-//require('./routes/usuario');
+
 
 const express = require('express');
 const app = express();
@@ -15,21 +15,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.use( require('./routes/usuario') );
+// configuracion de rutas
+app.use( require('./routes/index') );
+
 
 
 mongoose.connect(process.env.URLDB, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 5000,
-  useFindAndModify: false,
-  useCreateIndex: true,
-  dbName: 'cafe'
-})
-.then( () => {
-  console.log('Base de datos ONLINE');
-})
-.catch((err) => console.log(err));
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000,
+    useFindAndModify: false,
+    useCreateIndex: true,
+    dbName: 'cafe'
+  })
+  .then( () => {
+    console.log('Base de datos ONLINE');
+  })
+  .catch((err) => console.log(err));
 
 
  
