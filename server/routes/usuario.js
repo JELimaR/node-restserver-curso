@@ -11,11 +11,6 @@ const {verificaToken, verificaAdmin_Role} = require('../midllewares/autenticatio
 
 app.get('/usuario', [verificaToken] ,function (req, res) {
 
-    return res.json({
-        usuario: req.usuario,
-        nombre: req.usuario.nombre,
-    });
-
     let desde = req.query.desde || 0;
     desde = Number(desde);
 
